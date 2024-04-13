@@ -17,14 +17,12 @@ const Dashboard = () => {
 
   return (
     <>
-    <PrivateNav/>
-    <div className="flex min-h-screen flex-col md:flex-row bg-gray-900">
+    <div className="flex min-h-screen flex-col md:flex-row bg-gray-900 pt-20">
       <div className="md:w-56">
         <DashSidebar />
       </div>
 
-        {tab === "comments" && "hello"}
-        {tab === "dash" && "hello"}
+        
     </div>
     </>
   );

@@ -16,15 +16,18 @@ const App = () => {
   const {currentUser} = useSelector((state) => state.user)
   return (
     <BrowserRouter>
-      {currentUser ? "" :  <PublicNavbar/>}
+      
+            <PublicNavbar/>
       <Routes>
-
+          <Route >
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About/>} />
           <Route path="/plans" element={<Plan />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/features" element={<Features />} />
+          </Route>
+          
           <Route element  = {<PrivateRoute/>}>
             <Route path='/dashboard' element = {<Dashboard/>}/>
           </Route>

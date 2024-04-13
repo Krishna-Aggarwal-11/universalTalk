@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Features", href: "/features" },
@@ -11,11 +12,12 @@ const navigation = [
 
 export default function PublicNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const {currentUser} = useSelector((state) => state.user)
 
   return (
     <>
-      <div className="bg-gray-900">
-        <header className="absolute inset-x-0 top-0 z-50">
+      <div className="bg-gray-900 ">
+        <header className="absolute inset-x-0 top-0 z-50 border-b-4 border-white">
           <nav
             className="flex items-center justify-between p-6 lg:px-8"
             aria-label="Global"
@@ -48,12 +50,19 @@ export default function PublicNavbar() {
               ))}
             </div>
             <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-              <Link
+              {currentUser ? (<Link
+                to="/logout"
+                className="text-sm font-semibold leading-6 text-white"
+              >
+                Log out <span aria-hidden="true">&rarr;</span>
+              </Link>) :(
+                <Link
                 to="/login"
                 className="text-sm font-semibold leading-6 text-white"
               >
                 Log in <span aria-hidden="true">&rarr;</span>
               </Link>
+              )}
             </div>
           </nav>
           <Dialog

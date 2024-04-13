@@ -13,28 +13,28 @@ const features = [
     name: "ASL to text",
     description:
       "This technology converts American Sign Language gestures captured on video into written text. Imagine someone signing, and the system translates their movements into words on a screen.",
-    href: "#",
+    href: "/dashboard?tab=asltotext",
     icon: CloudArrowUpIcon,
   },
   {
     name: "Text to ASL",
     description:
       "This flips the above concept. It transforms written text into a visual representation of American Sign Language signs. Think typing a sentence and seeing it translated into a video of ASL signs.",
-    href: "#",
+    href: "/dashboard?tab=texttoasl",
     icon: LockClosedIcon,
   },
   {
     name: "Text to speech",
     description:
       " This is a common feature that converts written text into audible speech using a computer-generated voice. It's like having a digital narrator read text aloud.",
-    href: "#",
+    href: "/dashboard?tab=texttospeech",
     icon: ArrowPathIcon,
   },
   {
     name: "Multilingual Text",
     description:
       "This refers to technology that supports translation between multiple written languages. So, you can type something in English and have it translated into Spanish, French, or any other supported language.",
-    href: "#",
+    href: "/dashboard?tab=multilingualtext",
     icon: ArrowPathIcon,
   },
 ];
